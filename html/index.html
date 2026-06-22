@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>City Hall</title>
+    </head>
+    <body>
+        <div class="ch-overlay" id="ch-overlay"></div>
+        <div class="container" id="ch-root">
+            <div class="cityhall-shell">
+                <header class="cityhall-header">
+                    <div class="cityhall-brand">
+                        <span class="cityhall-seal"><i class="fa-solid fa-landmark"></i></span>
+                        <div class="cityhall-titles">
+                            <span class="cityhall-kicker">Municipal Services</span>
+                            <h1>LEBERTA City Hall</h1>
+                        </div>
+                    </div>
+                    <p class="cityhall-tagline">Identity · Licenses · Employment</p>
+                </header>
+
+                <div class="cityhall-option-blocks">
+                    <div class="cityhall-option-block" data-page="identity">
+                        <div class="opt-icon"><i class="fa-regular fa-id-card"></i></div>
+                        <h3>Identity &amp; licenses</h3>
+                        <p>ID, driver license, firearms permit</p>
+                    </div>
+                    <div class="cityhall-option-block" data-page="job">
+                        <div class="opt-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3>Employment</h3>
+                        <p>Browse and apply for city jobs</p>
+                    </div>
+                </div>
+
+                <div class="cityhall-identity-page">
+                    <h2 class="subpage-title"><i class="fa-solid fa-file-signature"></i> Available documents</h2>
+                    <div class="identity-page-blocks"></div>
+                    <div class="subpage-actions">
+                        <button type="button" class="btn btn-primary request-identity-button">Purchase</button>
+                        <button type="button" class="btn btn-ghost back-to-main">Back</button>
+                    </div>
+                </div>
+
+                <div class="cityhall-job-page">
+                    <h2 class="subpage-title"><i class="fa-solid fa-people-group"></i> Open positions</h2>
+                    <div class="job-page-blocks"></div>
+                    <div class="subpage-actions">
+                        <button type="button" class="btn btn-primary apply-job-button">Apply</button>
+                        <button type="button" class="btn btn-ghost back-to-main">Back</button>
+                    </div>
+                </div>
+
+                <footer class="cityhall-footer">
+                    <span><kbd>ESC</kbd> close</span>
+                    <span class="footer-hint">Fees payable in cash at the desk</span>
+                </footer>
+            </div>
+        </div>
+    </body>
+    <script src="./app.js"></script>
+</html>
