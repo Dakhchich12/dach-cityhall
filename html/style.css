@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap");
+
+:root {
+    --ch-border: rgba(255, 255, 255, 0.22);
+    --ch-border-soft: rgba(255, 255, 255, 0.12);
+    --ch-gold: #e8d48b;
+    --ch-accent: #7dd3fc;
+    --ch-accent2: #5eead4;
+    --ch-text: #f1f5f9;
+    --ch-muted: rgba(226, 232, 240, 0.72);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.ch-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(640px, 94vw);
+    max-height: min(86vh, 720px);
+    z-index: 1;
+}
+
+.container.is-visible ~ .ch-overlay,
+body:has(.container.is-visible) .ch-overlay {
+    display: block;
+}
+
+.cityhall-shell {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid var(--ch-border);
+    border-radius: 4px;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: min(86vh, 720px);
+}
+
+.cityhall-header {
+    padding: 1.1rem 1.35rem 0.85rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid var(--ch-border-soft);
+}
+
+.cityhall-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.cityhall-seal {
+    width: 48px;
+    height: 48px;
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid var(--ch-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ch-gold);
+    font-size: 1.35rem;
+}
+
+.cityhall-kicker {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ch-muted);
+}
+
+.cityhall-header h1 {
+    margin: 0.15rem 0 0;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--ch-text);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.cityhall-tagline {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ch-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.cityhall-option-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    padding: 1.1rem 1.25rem 0.5rem;
+}
+
+.cityhall-option-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem 1.1rem;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    text-align: left;
+    border: 1px solid var(--ch-border-soft);
+    background: transparent;
+}
+
+.cityhall-option-block[data-page="identity"] {
+    border-color: var(--ch-border-soft);
+}
+
+.cityhall-option-block[data-page="identity"]:hover {
+    border-color: var(--ch-accent);
+}
+
+.cityhall-option-block[data-page="job"] {
+    border-color: var(--ch-border-soft);
+}
+
+.cityhall-option-block[data-page="job"]:hover {
+    border-color: var(--ch-accent2);
+}
+
+.cityhall-option-block:hover {
+    transform: none;
+}
+
+.opt-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid var(--ch-border-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.65rem;
+    font-size: 1.15rem;
+    background: transparent;
+}
+
+.cityhall-option-block[data-page="identity"] .opt-icon {
+    color: var(--ch-accent);
+}
+
+.cityhall-option-block[data-page="job"] .opt-icon {
+    color: var(--ch-accent2);
+}
+
+.cityhall-option-block h3 {
+    margin: 0 0 0.25rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ch-text);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.cityhall-option-block p {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--ch-muted);
+    line-height: 1.35;
+}
+
+.subpage-title {
+    margin: 0 0 0.75rem;
+    padding: 0 1.25rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ch-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.subpage-title i {
+    margin-right: 0.35rem;
+    opacity: 0.85;
+}
+
+.cityhall-identity-page,
+.cityhall-job-page {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    padding: 0.5rem 0 0;
+}
+
+.identity-page-blocks,
+.job-page-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.65rem;
+    padding: 0 1.25rem;
+    overflow-y: auto;
+    max-height: 280px;
+}
+
+.identity-page-block,
+.job-page-block {
+    background: transparent;
+    border: 1px solid var(--ch-border-soft);
+    border-radius: 2px;
+    padding: 0.85rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+    color: var(--ch-text);
+}
+
+.identity-page-block:hover,
+.job-page-block:hover {
+    border-color: var(--ch-gold);
+}
+
+.identity-page-block h3,
+.job-page-block h3 {
+    margin: 0 0 0.35rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.identity-page-block p,
+.job-page-block p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--ch-muted);
+    line-height: 1.35;
+}
+
+.subpage-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem 1.1rem;
+    margin-top: auto;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.55rem 1.1rem;
+    transition: filter 0.12s ease, transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    display: none;
+    background: transparent;
+    color: var(--ch-text);
+    border: 1px solid var(--ch-border);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+.btn-primary:hover {
+    border-color: var(--ch-accent);
+    color: var(--ch-accent);
+}
+
+.btn-ghost {
+    display: none;
+    background: transparent;
+    color: var(--ch-muted);
+    border: 1px solid var(--ch-border-soft);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+.btn-ghost:hover {
+    border-color: var(--ch-border);
+    color: var(--ch-text);
+}
+
+.identity-selected,
+.job-selected {
+    border: 1px solid var(--ch-gold);
+    background: transparent;
+}
+
+.cityhall-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.55rem 1.25rem 0.85rem;
+    font-size: 0.72rem;
+    color: var(--ch-muted);
+    border-top: 1px solid var(--ch-border);
+}
+
+.cityhall-footer kbd {
+    font-family: inherit;
+    font-size: 0.65rem;
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+    border: 1px solid var(--ch-border-soft);
+    background: transparent;
+    color: var(--ch-text);
+}
+
+.footer-hint {
+    opacity: 0.85;
+}
+
+.fade-in {
+    animation: chFade 0.28s ease-out;
+}
+
+@keyframes chFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: chSlide 0.25s ease-out;
+}
+
+@keyframes chSlide {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.slide-out {
+    opacity: 0;
+    transform: translateY(-6px);
+}
