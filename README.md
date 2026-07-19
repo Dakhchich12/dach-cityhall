@@ -6,7 +6,7 @@ City Services for QB-Core Framework
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 - [PolyZone](https://github.com/mkafrin/PolyZone) - For Interaction (DrawText and qb-target both require this)
-- [qb-target](https://github.com/BerkieBb/qb-target) 
+- [qb-target](https://github.com/BerkieBb/qb-target) or ox target 
 - [ox_target](https://github.com/overextended/ox_target) 
 - [jpr-phonesystem](https://github.com/qbcore-framework/jpr-phonesystem) or any script phone- For E-Mail
 
