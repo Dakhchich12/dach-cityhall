@@ -8,7 +8,7 @@ City Services for QB-Core Framework
 - [PolyZone](https://github.com/mkafrin/PolyZone) - For Interaction (DrawText and qb-target both require this)
 - [qb-target](https://github.com/BerkieBb/qb-target) 
 - [ox_target](https://github.com/overextended/ox_target) 
-- [jpr-phonesystem](https://github.com/qbcore-framework/jpr-phonesystem) - For E-Mail
+- [jpr-phonesystem](https://github.com/qbcore-framework/jpr-phonesystem) or any script phone- For E-Mail
 
 ## Features
 - Redesigned NUI (civic / glass style) with lightweight **menu sounds** (Web Audio — no extra files)
