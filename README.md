@@ -32,5 +32,6 @@ ensure qb-target # Optional
 ensure jpr-phonesystem
 ensure dach-cityhall
 ```
+-add your jobs in config file and description in file app js
 
 Created with ❤️ by Dakhchich
